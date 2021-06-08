@@ -1,0 +1,13 @@
+# Username: root
+
+# Password: 5iveL!fe
+
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t bb1 -f Dockerfile.dev .
+
+script:
+  - docker run bb1 rpm run test -- --coverage

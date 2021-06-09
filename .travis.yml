@@ -10,12 +10,11 @@ script:
 
 deploy:
   provider: elasticbeanstalk
+  access_key_id:
+    secure: "$AWS_ACCESS_KEY"
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
   region: "us-east-2"
-  app: "mercury"
+  app: mercury"
   env: "Mercury-env"
-  bucket_path: "mercury"
-  on:
-    branch: main
-  access_key_id: "$AWS_ACCESS_KEY"
-  secret_access_key: "$AWS_SECRET_KEY"
-  bucket: "elasticbeanstalk-us-east-2-263880370849"
+  bucket_name: "elasticbeanstalk-us-east-2-263880370849"

@@ -18,3 +18,5 @@ deploy:
   app: mercury"
   env: "Mercury-env"
   bucket_name: "elasticbeanstalk-us-east-2-263880370849"
+  on:
+    branch: main

@@ -15,7 +15,7 @@ deploy:
   secret_access_key:
     secure: $AWS_SECRET_KEY
   region: "us-east-2"
-  app: mercury"
+  app: "mercury"
   env: "Mercury-env"
   bucket_name: "elasticbeanstalk-us-east-2-263880370849"
   on:

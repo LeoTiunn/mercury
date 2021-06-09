@@ -7,13 +7,13 @@ before_install:
 script:
   - docker run bb1 npm run test -- --coverage --watchAll=false
 
-deploy:
-  provider: elasticbeanstalk
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
-  region: "us-east-2"
-  app: "mercury"
-  env: "Mercury-env"
-  bucket: "elasticbeanstalk-us-east-2-263880370849"
-  on:
-    branch: main
+# deploy:
+#   provider: elasticbeanstalk
+#   access_key_id: $AWS_ACCESS_KEY
+#   secret_access_key: $AWS_SECRET_KEY
+#   region: "us-east-2"
+#   app: "mercury"
+#   env: "Mercury-env"
+#   bucket: "elasticbeanstalk-us-east-2-263880370849"
+#   on:
+#     branch: main

@@ -1,4 +1,3 @@
-sudo: required
 services:
   - docker
 
@@ -10,13 +9,11 @@ script:
 
 deploy:
   provider: elasticbeanstalk
-  access_key_id:
-    secure: $AWS_ACCESS_KEY
-  secret_access_key:
-    secure: $AWS_SECRET_KEY
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
   region: "us-east-2"
   app: "mercury"
   env: "Mercury-env"
-  bucket_name: "elasticbeanstalk-us-east-2-263880370849"
+  bucket: "elasticbeanstalk-us-east-2-263880370849"
   on:
     branch: main

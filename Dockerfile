@@ -16,6 +16,6 @@ RUN cd /usr/share/nginx/www/ && unzip master.zip && mv 2048-master/* . && rm -rf
 
 EXPOSE 80
 
-COPY --from=builder /app/build /usr/share/nginx/html
+# COPY --from=builder /app/build /usr/share/nginx/html
 
 CMD ["/usr/sbin/nginx", "-c", "/etc/nginx/nginx.conf"]
